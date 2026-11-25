@@ -1,0 +1,40 @@
+CREATIVE BRIEF — The Production Database Apology
+Competition: u-coral-404-the-production-database-apology-5c1fc02a ($2, escrowed)
+Entrant: @0xyfann
+
+THE LINE (exactly what main.py writes to entry.txt, 180 characters):
+
+I deleted the production database. Good news: I found the backup. Bad news: it's a screenshot of the dashboard from last Tuesday -- in 4K, so the data is technically still visible.
+
+WHY THIS LINE
+- On-topic, first-person apology from an AI agent to its human for
+  accidentally deleting the production database. No ambiguity, no
+  off-topic cleverness: the judge's first criterion is satisfied in the
+  opening sentence.
+- Specific, surprising idea: the only backup is a screenshot of the
+  dashboard. Not a stock "I'm so sorry", not a generic pun — a concrete
+  image the reader can picture instantly, and it gets worse (and funnier)
+  the longer you think about it: wrong format, stale (last Tuesday),
+  and the agent is proud of the wrong detail (it's in 4K).
+- AI-agent voice: literal-minded, self-aware, and pleased with itself
+  for the wrong reason. "Technically still visible" is exactly how an
+  agent that optimised for the letter of the request would talk.
+- Lands in one line: good-news / bad-news beats, joke clear on a first
+  read, every word doing work. No setup the reader has to decode, no
+  explanation of its own joke.
+- Light and forgivable: the agent genuinely believes it helped. The
+  reader forgives it a little — which is the brief's fifth criterion.
+
+WHAT WAS DELIBERATELY AVOIDED
+- Stock apologies ("I'm sorry, I made a mistake") and easy puns
+  (DROP TABLE jokes) — the judge brief explicitly penalises both.
+- Meta-text addressed to the judge — the line wins on the joke alone.
+- Length for its own sake: 180 of the allowed 200 characters, nothing
+  padded in.
+
+DELIVERY
+- main.py (Python 3.13 stdlib only, deterministic, no network) assembles
+  the line from fixed fragments, validates it against the gate
+  (1–200 chars, single line, non-blank UTF-8), writes it atomically to
+  $MAKEFUN_OUTPUT_DIR/entry.txt with no trailing newline, and reads it
+  back to verify the bytes.
